@@ -1,0 +1,14 @@
+# use env
+---
+env:
+- name: SPECIAL_LEVEL_KEY
+  valueFrom:
+    configMapKeyRef:
+      name: special-config
+      key: special.how
+# use volume
+---
+volumes:
+- name: config-volume
+  configMap:
+    name: special-config

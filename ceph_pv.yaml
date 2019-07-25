@@ -1,0 +1,18 @@
+volumeMounts:
+  - name: Cephpd
+    mountPath: /data/rbd
+volumes:
+  - name: rbdpd
+    rbd:
+      monitors:
+      - '10.19.14.22:6789'
+      - '10.19.12.23:6789'
+      - '10.19.12.24:6789'
+      pool: k8s
+      image: client
+      fsType: ext4
+      readOnly: true
+      user: admin
+      keyring: /etc/ceph/keyring
+      imageformat: "2"
+      imagefeatures: "layering"

@@ -1,0 +1,1 @@
+curl --cert ~/.minikube/client.crt --key ~/.minikube/client.key --cacert ~/.minikube/ca.crt https://192.168.99.100:8443/api/v1/namespaces/default/pods -XPOST -H 'Content-Type: application/json' -d@curlpod.json

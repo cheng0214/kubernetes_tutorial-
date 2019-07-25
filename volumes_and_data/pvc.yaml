@@ -1,0 +1,21 @@
+kind: PersistentVolumeClaim
+apiVersion: v1
+metadata:
+  name: myclaim
+spec:
+  accessMode:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 8GI
+
+(In the Pod)
+...
+spec:
+  containers:
+...
+  volumes:
+    - name: test-volume
+      persistentVolumeClaim:
+        claimName: myclaim
+
