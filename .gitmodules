@@ -1,3 +1,6 @@
 [submodule "kubernetes.io/application/guestbook_with_logging_and_metrics/kube-state-metrics"]
 	path = kubernetes.io/application/guestbook_with_logging_and_metrics/kube-state-metrics
 	url = https://github.com/kubernetes/kube-state-metrics.git
+[submodule "kubernetes.io/application/guestbook_with_logging_and_metrics/examples"]
+	path = kubernetes.io/application/guestbook_with_logging_and_metrics/examples
+	url = https://github.com/elastic/examples.git
